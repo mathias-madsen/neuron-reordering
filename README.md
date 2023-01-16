@@ -1,14 +1,18 @@
 # neuron-reordering
-Functions for harmonizing the order of neurons in two neural networks
 
-This reimplements the methods presented in the paper 
-[``Git Re-Basin: Merging Models modulo Permutation Symmetries''](https://arxiv.org/abs/2209.04836).
+This repository contains functions for harmonizing the order of neurons in two neural networks.
+It reimplements the methods presented in the paper 
+["Git Re-Basin: Merging Models modulo Permutation Symmetries"](https://arxiv.org/abs/2209.04836).
+
+# Background
 
 That paper is motivated by the observation that you can permute the neurons
 in a hidden layer of a neural network without changing the behavior of the
 network. Given two neural networks of the same architecture, we can therefore
 sort the neurons of each hidden layer in such a way that the parameters of
 the two networks become as similar as possible.
+
+![reordering_illustration_cropped](https://user-images.githubusercontent.com/16747080/212751526-d1dd5e6d-9fb3-4307-bb59-bbe8ae8037bb.png)
 
 Once you have reshuffled the order of each hidden layer in a network to make
 it more similar to another network, you can take mixtures of the two
